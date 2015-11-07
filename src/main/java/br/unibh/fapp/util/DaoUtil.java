@@ -71,7 +71,7 @@ public class DaoUtil {
 		
 	}
 	
-	public List<Teste> findAll(){
+	public List<Object> findAll(Object object){
 		
 		EntityManager em = HibernateUtil.pegaSessao();
 
@@ -84,7 +84,7 @@ public class DaoUtil {
 			e.printStackTrace();
 			System.out.println("Erro ao recuperar Dados:");
 		} 
-		return  em.createQuery("Select t from  Teste t" ).getResultList();
+		return  em.createQuery("Select t from  "+object.getClass().getName().substring(23)+" t" ).getResultList();
 
 	}
 

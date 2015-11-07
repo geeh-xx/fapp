@@ -23,13 +23,13 @@ public class Main {
 		
 //		System.out.println(teste2.getNome());
 	
-		List<Teste> listaTeste = new ArrayList<Teste>();
+		List<Object> listaTeste = new ArrayList<Object>();
 		
-		listaTeste =  dao.findAll();
+		listaTeste =  dao.findAll(teste);
 		
-		for (Teste teste3 : listaTeste) {
+		for (Object teste3 : listaTeste) {
 			
-			System.out.println(teste3.getNome());
+			System.out.println(((Teste) teste3).getNome());
 		}
 		
 	}
