@@ -11,6 +11,7 @@ import javax.ws.rs.core.Response;
 public class Hello {
 
 	@GET
+	@Path("/all")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getIt() {
 		return "Got it!";
